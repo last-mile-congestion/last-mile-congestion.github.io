@@ -1,0 +1,25 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.wrapper {
+  width:810px;
+}
+
+section {
+  width:750px;
+}
+
+nav {
+  margin-left:-660px;
+}
+
+.menu {
+    position:fixed;
+    left:25%;
+    padding: 0px 0px;
+    margin-top: 0px;
+    line-height:14px;
+    font-size:14px;
+  }
