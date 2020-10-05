@@ -1,0 +1,17 @@
+---
+layout: default
+title: Source Code
+---
+
+
+<h2>Processing Atlas traceroute</h2>
+<p> The first step is to process Atlas traceroute data and compute last-mile median RTTs for each probe.</p>
+<p>
+To fetch and process Atlas traceroute we implemented an add-on to <a href="https://github.com/InternetHealthReport/raclette">raclette</a>.
+You can use it by specifiying 'converter=firsthop' in the timetrack section of your raclette configuration file. See the exmaple configuration file here: <a href="https://github.com/InternetHealthReport/raclette/blob/master/conf/lastmile.conf">https://github.com/InternetHealthReport/raclette/blob/master/conf/lastmile.conf</a>
+This will produce sqlite files as the ones available <a href="/data.html">here</a>.
+</p>
+
+<h2>Processing median queuing delay</h2>
+<p>We provide a set of scripts to read the obtained sqlite files and compute last-mile queuing delay for each monitored AS. Please find the scripts and corresponding instrutions on this repository: https://github.com/InternetHealthReport/last-mile</p>
+
