@@ -24,7 +24,11 @@ title: Data
 
 <h2>RTT time-series</h2>
 <p>
-The last-mile median RTT time-series for each Atlas probe are available in sqlite databases. 
+The last-mile median RTT time-series for each Atlas probe are available in two formats. 
+</p>
+<h3>Sqlite snapshots</h3>
+<p>
+The results for the 7 measurement periods presented in the IMC paper  are available as sqlite databases. 
 Note that a last processing step is required to obtain the median last-mile queuing delay (see <a href="/source.html">source code page</a>).
 </p>
 <p><ul>
@@ -36,4 +40,12 @@ Note that a last processing step is required to obtain the median last-mile queu
     <li><a href="https://exp1.iijlab.net/last-mile/imc20/results_2019-09-01T00:00.sql">2019-09-01</a></li>
     <li><a href="https://exp1.iijlab.net/last-mile/imc20/results_2020-04-01T00:00.sql">2020-04-01</a></li>
 </ul>
+</p>
+
+<h3>Internet Health Report (IHR) API</h3>
+<p>
+We also provide near real time last-mile median RTT on the IHR API: https://ihr.iijlab.net/ihr/en-us/api
+Data is available from January 2020.
+Here is an example to get last-mile median RTTs for all probes in AS7922 around March 1st at midnight:<a href='https://ihr.iijlab.net/ihr/api/network_delay/?timebin__lte=2020-03-01T01%3A00&timebin__gte=2020-03-01T00%3A00&startpoint_type=PB&endpoint_key=LM47922'>https://ihr.iijlab.net/ihr/api/network_delay/?timebin__lte=2020-03-01T01%3A00&timebin__gte=2020-03-01T00%3A00&startpoint_type=PB&endpoint_key=LM47922</a>
+(LM47922 is not a typo LM4 stands for Last-Mile-IPv4)
 </p>
